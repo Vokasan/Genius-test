@@ -1,0 +1,14 @@
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact {
+    padding-bottom: 96px;
+}
+
+.map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}

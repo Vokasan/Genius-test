@@ -1,0 +1,35 @@
+@import './utils/fonts';
+@import './utils/variables';
+@import './base';
+@import './utils/utils';
+.section {
+    padding: 48px 0;
+}
+
+h2 {
+    color: var(--color-prime-dark);
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3125;
+}
+
+.accent2 {
+    color: var(--color-brand2);
+}
+@import './layouts/container-section';
+@import './components/buttons';
+@import './components/links';
+@import './layouts/header';
+@import './layouts/hero-section';   
+@import './layouts/advanteges-section';
+@import './layouts/traditions-section';
+@import './layouts/chef-section';
+@import './components/chef-card';
+@import './layouts/format-section';
+@import './components/formats-cards';
+@import './components/carousel';
+@import './layouts/contact-section';
+@import './layouts/footer-section';
+@import './layouts/modal-section';
+@import './components/input';
+@import './layouts/form-section';

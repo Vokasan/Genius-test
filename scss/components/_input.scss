@@ -1,0 +1,29 @@
+.form-input {
+    padding: 16px 42px;
+    font-size: 16px;
+    line-height: 1.17;
+    width: 100%;
+    border: 1px solid #A18268;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.form-input:focus {
+    border-color: var(--color-brand);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--color-brand2);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+    color: var(--color-prime-dark);
+
+}
+
+.form-label {
+    display: block;
+}
