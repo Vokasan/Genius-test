@@ -1,78 +1,138 @@
 .footer {
-    background-color: var(--color-prime-dark);
-    background-image: url(../images/footer.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
     padding: 32px 0;
-}
-
-.footer::before {
-    position: absolute;
-    width: 180px;
-    height: 120px;
+    position: relative;
+    background-color: var(--color-prime-dark);
+    background-image: url('../images/footer.png');
     background-repeat: no-repeat;
-    bottom: 0;
-    background-image: url('../images/bread.png');
-    content: '';
-}
+    background-size: cover;
+    background-position: center;
 
-.footer::after {
-    position: absolute;
-    width: 380px;
-    height: 190px;
-    background-repeat: no-repeat;
-    bottom: 0;
-    right: 0;
-    background-image: url('../images/two-bread.png');
-    content: '';
-}
+    // / ! ! ! 
+        width: 100%;
+        max-width: 1288px;
+        margin: 0 auto;
+        padding: 0 auto;
 
+    &::before,
+    &::after {
+        position: absolute;
+        bottom: 0;
+        background-repeat: no-repeat;
+        content: '';
+    }
 
-.footer-container {
-    display: flex;
-    gap: 20px;
-}
+    &::before {
+        width: 100px;
+        height: 90px;
+        right: 0;
+        background-image: url('../images/two-bread-mobile.png');
 
-.footer-nav,
-.footer-address {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
+        @media screen and (min-width: $bp-tablet) {
+            left: 0;
+            right: auto;
+            width: 180px;
+            height: 120px;
+            background-image: url('../images/bread.png');
+        }
+    }
 
-.footer-logo,
-.footer-menu,
-.addrees-list,
-.addrees-info {
-    flex-grow: 1;
-}
+    &::after {
+        width: 85px;
+        height: 205px;
+        top: 0;
+        left: 0;
+        background-image: url('../images/bread-mobile.png');
 
-.contact-section {
-    margin-bottom: 16px;
-}
+        @media screen and (min-width: $bp-tablet) {
+            right: 0;
+            top: auto;
+            left: auto;
+            width: 380px;
+            height: 190px;
+            background-image: url('../images/two-bread.png');
+        }
+    }
 
-.address-link {
-    color: var(--color-prime-light);
-    font-size: 16px;
-    font-weight: 300;
-    text-decoration: none;
-}
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-.address-link:hover {
-    color: var(--color-brand);
-}
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+        }
+    }
 
-.address-icon {
-    fill: var(--color-prime-light);
-}
+    &__nav,
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
 
-.address-icon:hover {
-    fill: var(--color-brand);
-}
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            flex-basis: 50%;
+            text-align: left;
+        }
+    }
 
-.addres-copyright {
-    font-size: 14px;
-    color: var(--color-brand2);
+    &__logo {
+        flex-grow: 1;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 16px;
+    }
+
+    &__address-list,
+    &__address-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 16px;
+    }
+
+    &__address-list,
+    &__address-info {
+        flex-grow: 1;
+    }
+
+    &__address-link {
+        color: var(--color-prime-light);
+        font-size: 16px;
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    &__address-link:hover {
+        color: var(--color-brand);
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 16px;
+
+        @media screen and (min-width: $bp-tablet) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__address-icon {
+        fill: var(--color-prime-light);
+    }
+
+    &__address-icon:hover {
+        fill: var(--color-brand);
+    }
+
+    &__address-copyright {
+        color: #a28268;
+        font-size: 14px;
+    }
 }
